@@ -1,4 +1,4 @@
-// Wait for the page to load
+// load page
 window.onload = function() {
     // Hamburger menu
     var hamburger = document.querySelector('.hamburger-icon');
@@ -8,14 +8,14 @@ window.onload = function() {
         navLinks.classList.toggle('show');
     }
     
-    // Close menu when clicking outside
+    // menu closes when clicking outside
     document.onclick = function(event) {
         if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
             navLinks.classList.remove('show');
         }
     }
 
-    // Blog posts navigation
+    // Blog posts movements
     var blogPosts = document.querySelectorAll('.blog-post');
     var currentBlogPost = 0;
     blogPosts[0].classList.add('active');
@@ -24,7 +24,7 @@ window.onload = function() {
     var blogNextBtn = document.querySelector('.blog-section .next-btn');
     
     function updateBlogButtons() {
-        // Always show buttons since we can now cycle
+        // Always show buttons
         blogPrevBtn.style.display = 'block';
         blogNextBtn.style.display = 'block';
     }
@@ -43,7 +43,7 @@ window.onload = function() {
     
     updateBlogButtons();
 
-    // Gallery navigation
+    // Gallery movements
     var galleryItems = document.querySelectorAll('.gallery-item');
     var currentGalleryItem = 0;
     galleryItems[0].classList.add('active');
@@ -52,7 +52,7 @@ window.onload = function() {
     var galleryNextBtn = document.querySelector('.gallery-section .next-btn');
     
     function updateGalleryButtons() {
-        // Always show buttons since we can now cycle
+        // Always show buttons 
         galleryPrevBtn.style.display = 'block';
         galleryNextBtn.style.display = 'block';
     }
