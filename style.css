@@ -1,0 +1,398 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+.nav-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-links {
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 8px 20px;
+    margin: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background-color: #4a90e2;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 3px;
+    left: 0;
+}
+
+.hamburger-icon span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger-icon span:nth-child(3) {
+    top: 16px;
+}
+
+/* Profile Section */
+.profile-section {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 20px;
+}
+
+.profile-image {
+    padding: 10px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.profile-info {
+    padding: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
+}
+
+/* Papers Section */
+.papers-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 600px;
+    overflow: auto;
+}
+
+.papers-header {
+    background-color: #fff;
+    padding: 20px 20px 0 20px;
+}
+
+.paper-item {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* Blog and Gallery Container */
+.blog-gallery-container {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    height: 600px;
+}
+
+.blog-container {
+    position: relative;
+    height: 530px;
+    padding: 0 30px;
+}
+
+.blog-posts {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-post {
+    display: none;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    overflow: auto;
+}
+
+.blog-post.active {
+    display: block;
+}
+
+.blog-post h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.blog-post p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.blog-post p:first-of-type {
+    font-style: italic;
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    height: 600px;
+}
+
+.gallery-container {
+    position: relative;
+    height: 530px;
+    padding: 0 30px;
+}
+
+.gallery-grid {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item {
+    display: none;
+    height: 100%;
+    text-align: center;
+}
+
+.gallery-item.active {
+    display: block;
+}
+
+.gallery-item img {
+    max-height: 70%;
+    max-width: 85%;
+    margin: 20px auto;
+    display: block;
+    object-fit: contain;
+}
+
+.gallery-caption {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-top: 2px solid #4a90e2;
+}
+
+/* Navigation Buttons */
+.scroll-btn {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #357abd;
+    opacity: 1;
+}
+
+.prev-btn {
+    left: -5px;
+}
+
+.next-btn {
+    right: -5px;
+}
+
+.scroll-btn.hidden {
+    display: none;
+}
+
+/* Contacts Section */
+.contacts-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+}
+
+.contact-item {
+    display: inline-block;
+    margin: 15px 25px;
+    padding: 10px;
+}
+
+.contact-item:hover {
+    background-color: #f5f5f5;
+}
+
+.contact-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact-item span {
+    font-size: 16px;
+    color: #333;
+    vertical-align: middle;
+}
+
+/* Icon Colors */
+.fa-envelope { color: #d44638; }
+.fa-phone { color: #2ecc71; }
+.fa-linkedin { color: #0077b5; }
+.fa-github { color: #333; }
+.fa-twitter { color: #1da1f2; }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-gallery-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .profile-image img {
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.show {
+        display: block;
+    }
+    
+    .nav-button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .profile-image img {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+    
+    .scroll-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .contact-item {
+        display: block;
+        margin: 10px 0;
+    }
+}
